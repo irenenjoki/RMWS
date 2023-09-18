@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    background-color: #F3F4F6;
+}
+.bg-dark-transparent{
+    background-color: #f0e5cfc9
+    ;
+}
+.fs-30{
+    font-size: 30px;
+}
+.fs-50{
+    font-size: 50px;
+}
+html{
+   scroll-behavior: smooth;
+}
+/* footer */
+
+footer{
+   background-color: #acd6e2;
+   color: #150202;
+   font-weight: bold;
+   text-decoration-line: none;
+   text-align: center;
+}
+
+.footer-link-item{
+    color: #000000;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+.footer-link-item:hover{
+    color: crimson;
+    font-weight: normal;
+}
+.icon-link{
+    color: rgb(5, 5, 5);
+    font-size: 40px;
+    font-weight: bold;
+}
+.icon-link:hover{
+    color: crimson;
+    font-weight: normal;
+}
+.gotoupbtn{
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   background: rgb(226, 70, 9);
+   bottom: 40px;
+   right: 50px;
+   border-radius: 2px;
+   text-align: center;
+   line-height: 50px;
+   color: #080000;
+   font-size: 30px;
+   text-decoration: none;
+   cursor: pointer;
+   transition: 0.5s;
+   z-index: 1;
+}
+.gotoupbtn:hover{
+   font-size: 25px;
+   background: rgb(52, 5, 141);
+   color: rgb(78, 30, 30);
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+}
+.custom-btn{
+    color: rgb(5, 5, 5);
+    font-weight: bold;
+}
+.custom-btn:hover{
+    background-color: rgb(15, 163, 27);
+    font-weight: normal;
+    color: white;
+}
+/* Home page */
+.circle-img{
+    border-radius: 50%;
+}
+.icon-style{
+    color: rgb(5, 5, 5);
+    font-size: 30px;
+}
+.shadow-bg{
+    background: rgb(228,228,228);
+    background: radial-gradient(circle, rgba(228,228,228,1) 17%, rgba(208,205,253,1) 18%, rgba(220,213,255,1) 30%, rgba(228,227,229,1) 37%, rgba(206,203,255,1) 55%);
+}
+.height-5{
+    height: 250px;
+}
+
+/* menu */
+/* card */
+.card-menu{
+    background-color: #fff9e9;
+}
+.breadcrumb{
+    background-color: #f3eee5;
+}
+.breadcrumb-item{
+    color: #000000;
+    
+}
+
+/*about*/
+
+/* contact us */
+
