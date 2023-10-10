@@ -22,7 +22,25 @@
           <a class="navbar-brand" href="#">
             <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" height="50" alt="Your choise logo">
           </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <!--class="navbar-toggler": This attribute assigns the class "navbar-toggler" to the <button>. 
+            data-toggle="collapse": This data attribute is specific to Bootstrap and indicates that this 
+            button will be used to toggle the visibility of a collapsible element (typically a navigation menu). 
+            When clicked, it will collapse or expand the targeted element.
+            data-target="#navbarTogglerDemo02": This data attribute specifies the target element that will be 
+          collapsed or expanded when the button is clicked. In this case, it targets an element with the ID
+           "navbarTogglerDemo02."
+          aria-controls="navbarTogglerDemo02": This is an accessibility attribute that indicates which element is 
+        controlled by this button. It helps screen readers understand the relationship between the button and the 
+        collapsible content.
+        aria-expanded="false": Another accessibility attribute that specifies the initial state of the 
+        collapsible element. In this case, it starts as "false," indicating that the content is initially collapsed.
+        aria-label="Toggle navigation": An accessibility attribute that provides a label for the button to 
+        describe its purpose. It lets screen readers announce that this button is used to toggle navigation.
+        <span class="navbar-toggler-icon"></span>: This <span> element is often used as a child of the button 
+          to provide an icon for the toggle button. The "navbar-toggler-icon" class is a Bootstrap-specific class that applies the styling for the toggle icon.
+            This class is often used in Bootstrap to style the button as a navigation toggle button.-->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" 
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           
@@ -56,7 +74,7 @@
           <h3 class="font-weight-normal text-white font-italic">
             Choose Delicious Food With Sweet Memo!
           </h3>
-          <div class="p-5">
+          <div class>
             <a href="reservation.html" class="btn btn-dark">RESERVATION</a>
           </div>
         </div>
@@ -68,8 +86,8 @@
   <section>
     <div class="container">
       <div class="row shadow py-3 my-3">
-        <div class="col-12 py-md-5 py-sm-2 px-md-5 px-sm-2 text-center">
-          <h3 class="p-3">About us</h3>
+        <div class="col-12 text-center">
+          <h3 class>About us</h3>
           <p>We're the best in our field, and it's all thanks to the incredible relationships we've formed with our 
             clients. Unlike our competitors, we're invested in developing a personal connection with each and every 
             one of our customers, by providing quality service and being available to you 24/7. Get in touch with us
@@ -80,16 +98,16 @@
     </div> <!--container end-->
     <div class="container">
       <div class="row py-3 my-3 px-5">
-        <div class="col-12 p-3 text-center">
+        <div class="col-12  text-center">
           <h3>Our Menus</h3>
         </div>
         <div class="col-lg-4 col-sm-12">
           <div class="card">
             <img src="https://thumbs.dreamstime.com/b/pasta-bolognese-linguine-mincemeat-tomatoes-italian-dinner-two-parmesan-cheese-dark-blue-tablecloth-chair-homeliness-169400490.jpg" class="card-img-top" height="auto" alt="Home Page Menu 1">
             <div class="card-body">
-              <h5 class="card-title text-center">Bakers & Roasters</h5>
+              <h4 class="card-title text-center">Bakers & Roasters</h4>
               <div class="text-justify">
-                <h5>About</h5>
+                <h4>About</h4>
                 <p>Brunch Restaurant,Serving breakfast, brunch, 
                   lunch,cakes, coffee, NZ wines, beers and cocktails.Head Chef  and his team prepare 
                   pure dishes full of flavour. Always seasonal and made with love.</p>
@@ -143,9 +161,9 @@
           <div class="card">
             <img src="https://media.istockphoto.com/photos/french-fries-and-chicken-burger-on-a-wooden-table-food-junk-food-and-picture-id1205589913?k=20&m=1205589913&s=170667a&w=0&h=gyHV4clLzufZHZBdlRyO5dqQqI1djR-tvCHP8gY7zjs=" class="card-img-top" height="auto" alt="Home Page Menu 1">
             <div class="card-body">
-              <h5 class="card-title text-center">Palmyra Syrian</h5>
+              <h4 class="card-title text-center">Palmyra Syrian</h4>
               <div class="text-justify">
-                <h5>About</h5>
+                <h4>About</h4>
                 <p>Palmyra, nicknamed city of thousand columns , is a Syrian archaeological site 
                   located in the government of Syria . We want to give you a taste of our culinary 
                   Syrian cusine with real authentic dishes made by our experienced Syrian cook Ibrahim Shamoun</p>
@@ -198,10 +216,12 @@
           <div class="card">
             <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/30/0/FNK_Berry-Dessert-Lasagna-H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1517349652859.jpeg" class="card-img-top" height="auto" alt="Home Page Menu 1">
             <div class="card-body">
-              <h5 class="card-title text-center">Adam</h5>
+              <h4 class="card-title text-center">Deserts</h4>
               <div class="text-justify">
-                <h5>About</h5>
-                <p>Restaurant Adam | PURE. HONEST. PASSION. For a night of culinary bliss Restaurant. Come in to our cosy restaurant on the Overtoom in the old part of Amsterdam West en let yourself be pampered.Airconditioning is placed in the restaurant to make it comfortable in the hot days of the year.</p>
+                <h4>About</h4>
+                <p> | PURE. HONEST. PASSION.Enjoy our wide range of flavors,textures,and form of deserts offered by your restaurant of choice.
+                  Welcome and experience sweetness &#128522;
+                </p>
               </div>
               
               <!-- Button trigger modal -->
@@ -307,7 +327,7 @@
           </div>
           <div class="text-center">
             <h4>Liam</h4>
-            <p class="font-italic">"Had dinner with girl friends. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. Will be back definitely!"</p>
+            <p class="font-italic">"Had dinner with friends. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. Will be back definitely!"</p>
           </div>
         </div>
       </div> <!--row end-->

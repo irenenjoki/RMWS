@@ -5,7 +5,7 @@ var year = currentDate.getFullYear();
 
 // Function to update the date and year
 function updateDate() {
-  document.getElementById('current-year').textContent = "© IRINNAH. All right Reserved " + year;
+  document.getElementById('current-year').textContent = "© IRINNAH&ADRIAN. All right Reserved " + year;
 }
 
 // Update the date and year initially
