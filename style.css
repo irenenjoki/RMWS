@@ -51,13 +51,13 @@ footer{
    position: fixed;
    width: 50px;
    height: 50px;
-   background: #fa4f0b;
+   background: #351002;
    bottom: 40px;
    right: 50px;
    border-radius: 2px;
    text-align: center;
    line-height: 50px;
-   color: #010e0f;
+   color: #056066;
    font-size: 30px;
    text-decoration: none;
    cursor: pointer;
@@ -95,14 +95,22 @@ footer{
 }
 
 /* menu */
+
 /* card */
+
+  .card-menu:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+ 
+  
 .card-menu{
-    background-color: #fff9e9;
+    background-color: #f3f2ec;
 }
 .breadcrumb{
     background-color: #f3eee5;
 }
-.image-container {
+.background-image-container {
     position: relative;
     display: inline-block;
   }
@@ -150,8 +158,8 @@ footer{
 	align-items: center;
 	justify-content: space-around;
 }
-.text h10{
-	color: #F8D210;
+.text h1{
+	color: #054e11;
 	font-size: 50px;
 	margin-bottom: 40px;
 	margin-top: 40px;
@@ -159,20 +167,7 @@ footer{
 .text p{
 	font-size: 18px;
 	margin-bottom: 70px;
-
 }
-
-#aboutlink{
-	color: #4C5270;
-	text-decoration: underline;
-	font-size: 20px;
-}
-
-#aboutlink:hover{
-	color: #F8D210;
-	font-size: 20px;
-}
-
 
 /* contact us */
 
