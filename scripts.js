@@ -14,7 +14,7 @@ updateDate();
 // Update the date and year every second
 setInterval(updateDate, 1000);
 
-const preloader = document.querySelector("[data-preaload]");
+const preloader = document.querySelector("[data-preload]");
 
 window.addEventListener("load", function () {
   var preloader = document.getElementById("preloader");
@@ -32,6 +32,8 @@ const addEventOnElements = function (elements, eventType, callback) {
     elements[i].addEventListener(eventType, callback);
   }
 }
+
+
 
 
 

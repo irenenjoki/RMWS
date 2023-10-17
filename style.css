@@ -123,7 +123,11 @@ footer{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for the darkness level */
   }
-  
+  .card-menu  img{
+	width: 600px;
+	max-width: 100%;
+	box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+}
 
 /*about*/
 #bg{
@@ -170,24 +174,27 @@ footer{
 }
 
 /* contact us */
-
+h2{
+    color: #0c6611;
+    font-size: xx-large;
+}
 h3{
     color: #0c6611;
 }
 h4{
     color: #0c6611;
 }
-/* Preloader Styles */
+/* Preloader Styles 
 #preloader {
     position: fixed;
     width: 100%;
     height: 100%;
-    background: #f79b9b;
+    background: #f8c475;
     z-index: 10;
     display: grid;
     justify-content: center;
     align-items: center;
-    transition: opacity 5s;
+    transition: opacity 500s;
 }
 
 .preload > * { transition: var(--transition-1); }
@@ -195,7 +202,7 @@ h4{
 .preload.loaded > * { opacity: 0; }
 
 .preload.loaded {
-  transition-delay: 250ms;
+  transition-delay: 250s;
   transform: translateY(100%);
 }
 .circle {
@@ -205,7 +212,7 @@ h4{
     border: 3px solid var(--white);
     border-block-start-color: var(--smoky-black-3);
     margin-block-end: 45px;
-    animation: rotate360 1s linear infinite;
+    animation: rotate360 150s linear infinite;
   }
 #loader {
     border: 4px solid #382b2b;
@@ -213,7 +220,7 @@ h4{
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    animation: spin 20s linear infinite;
+    animation: spin 2000s linear infinite;
 }
 .loaded #preloader {
     opacity: 0;
@@ -238,11 +245,52 @@ h4{
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-stroke: 0.5px var(--eerie-black-3);
-    animation: loadingText linear 22s infinite;
+    animation: loadingText linear 220s infinite;
   }
 
 
 @keyframes loadingText {
     0% { background-position: 100%; }
     100% { background-position: 0%; }
-  }
+  }*/
+
+  /*scrollbar*/
+  /* Customize the scrollbar */
+/* For webkit-based browsers like Chrome and Safari */
+
+/* Width and height of the scrollbar thumb */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background:transparent; /* Change the background color */
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #131212; /* Change the color of the thumb */
+    border-radius: 6px; /* Add rounded corners */
+}
+
+/* On hover, the thumb will have a different color */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.form{
+    box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+}
+
+    .reviews .content img:hover{
+        width: 630px;
+        max-width: 130%;
+    }
+    .reviews{
+        box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+    }
+    .index{
+        box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+    }
