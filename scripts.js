@@ -33,7 +33,15 @@ const addEventOnElements = function (elements, eventType, callback) {
   }
 }
 
-
+/*console.log(document.querySelector('input[name="name"]').value);
+console.log(document.querySelector('input[name="email"]').value);
+console.log(document.querySelector('input[name="date"]').value);
+console.log(document.querySelector('input[name="phone"]').value);
+console.log(document.querySelector('input[name="numberofperson"]').value);
+console.log(document.querySelector('input[name="payment"]').value);
+console.log(document.querySelector('input[name="time"]').value);
+console.log(document.querySelector('input[name="message"]').value);
+// ... Repeat for other fields*/
 
 
 

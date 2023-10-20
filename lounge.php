@@ -1,42 +1,45 @@
 <?php
-// Check if the reservation form has been submitted
+ $servername = "localhost";
+ $username = "root";
+ $password = "";
+ $dbname = "big lounge"; 
+
+ $conn = new mysqli($servername, $username, $password, $dbname);
+
+ if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+ }
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect user input
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $date = $_POST["date"];
-    $time = $_POST["time"];
-    $payment = $_POST["payment"];
-    $message = $_POST["message"];
+    $name = isset($_POST["name"]) ? $_POST["name"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+    $numberofperson = isset($_POST["numberofperson"]) ? $_POST["numberofperson"] : "";
+    $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
+    $date = isset($_POST["date"]) ? $_POST["date"] : "";
+    $time = isset($_POST["time"]) ? $_POST["time"] : "";
+    $payment = isset($_POST["payment"]) ? $_POST["payment"] : "";
+    $message = isset($_POST["message"]) ? $_POST["message"] : "";
+    
+   
 
-    // You should perform validation and sanitation of user input here
+    // Use prepared statement
+    $stmt = $conn->prepare("INSERT INTO restaurant (name, email, numberofperson, phone, date, time, payment, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssisssss", $name, $email, $numberofperson, $phone, $date, $time, $payment, $message);
 
-    // Database connection (you'll need to set up your database)
-    $servername = "localhost";
-    $username = "username";
-    $password = "password";
-    $dbname = "reservation";
-
-    // Create a connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // SQL query to insert reservation data into the database
-    $sql = "INSERT INTO reserve (name, email, phone, reservation_date, reservation_time, payment,message) VALUES ('$name', '$email', '$phone', '$date', '$time', '$message','$payment')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Reservation successfully created!";
+    if ($stmt->execute()) {
+        echo "Data has been successfully inserted into the database.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $stmt->error;
     }
 
-    // Close the database connection
+    $stmt->close();
     $conn->close();
 }
+var_dump($phone);
+var_dump($name);
+var_dump($date);
+var_dump($time);
+var_dump($payment);
+var_dump($message);
+var_dump($email);
+var_dump($numberofperson);
 ?>
-
