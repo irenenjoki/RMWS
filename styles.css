@@ -7,17 +7,7 @@
       box-sizing: border-box;
       font-family: 'Quicksand', sans-serif;
     }
-    body 
-    {
-      background-image: url('images/log in.jpg');
-      background-size: 1368px 665px;
-      background-repeat: no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      
-    }
+    
     section 
     {
       position: absolute;
@@ -30,11 +20,11 @@
       flex-wrap: wrap;
       overflow: hidden;
     }
-    section .signin
+    .signin
     {
       position: absolute;
       width: 400px;
-      background: #222222b4;  
+      background: #011f03b4;  
       z-index: 1000;
       display: flex;
       justify-content: center;
@@ -56,7 +46,7 @@
     section .signin .content h2 
     {
       font-size: 2em;
-      color: #F8D210;
+      color: #f86510;
       text-transform: uppercase;
     }
     section .signin .content .form 
@@ -75,7 +65,7 @@
     {
       position: relative;
       width: 100%;
-      background: #333;
+      background: #141414;
       border: none;
       outline: none;
       padding: 25px 10px 7.5px;
@@ -113,11 +103,18 @@
       color: #fff;
       text-decoration: none;
     }
-    .signin .content .form .links a:nth-child(2)
+    .signin .content .form .links a:nth-child(1), .signin .content .form .links a:nth-child(2)
     {
-        color: #F8D210;
+        color: #bb9d06;
       font-weight: 600;
     }
+    .signin .content .form .links a:hover {
+      color: #830718; /* Change the text color on hover */
+      transform: scale(1.1); /* Add a slight scale effect on hover */
+      transition: 0.3s; /* Add a smooth transition for the effect */
+      text-decoration: underline;
+  }
+  
     .signin .content .form .inputBox input[type="submit"]
     {
       padding: 10px;
@@ -128,11 +125,15 @@
       letter-spacing: 0.05em;
       cursor: pointer;
     }
-    input[type="submit"]:active
+    input[type="submit"]:hover
     {
-      opacity: 0.6;
+      background-color: #520404; /* Change the background color on hover */
+      color: #ce0d0d; /* Change the text color on hover */
+      box-shadow: 0 0 10px rgba(10, 70, 2, 0.5); /* Add a shadow effect on hover */
+      transform: scale(1.05); /* Add a slight scale effect on hover */
+      transition: 0.3s; /* Add a smooth transition for the effect */
     }
-    @media (max-width: 900px)
+    @media (max-width: 950px)
     {
       section span 
       {
@@ -148,3 +149,11 @@
         height: calc(20vw - 2px);
       }
     }
+
+    .bg {
+      background-image: url('');
+      background-size: cover; /* Adjust the size property as needed */
+      background-position: center; /* Adjust the position property as needed */
+      background-repeat: no-repeat;
+  }
+  

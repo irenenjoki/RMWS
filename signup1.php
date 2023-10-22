@@ -2,17 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" type = "image/png" href = "https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>SIGN IN</title>
 </head>
 <body>
+    
 <section>
-        <div class="signin">
+<div  style="background-image: url(https://img.freepik.com/free-photo/exploding-burger-with-vegetables-melted-cheese-black-background-generative-ai_157027-1734.jpg); background-attachment: fixed; height: 600px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
+			<div class="overlay"></div>
+            
+        <div class="signin" style="background-color: #011f03b4;">
+        
             <div class="content">
+            
                 <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" width="100" height="100">
-                <h2>Sign In</h2>
-                <div class="form">
+                <h2 style="color:blue;">Sign In</h2>
+    <!-- Your form content here -->
+           
+ <div class="form">
+ 
     <form action="signup.php" method="POST">
     <div class="inputBox">
 <input type="text" name="username" required>
@@ -32,7 +44,9 @@
 <div class="inputBox">
 <input type="submit" value="Sign Up">
 </div>
+</div>
     </form>
+    
             </div>
         </div>
         </div>

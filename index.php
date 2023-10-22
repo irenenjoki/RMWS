@@ -322,11 +322,11 @@
         <div class="col-md-4 col-sm-12 p-md-5 p-sm-2">
           <div class="d-flex justify-content-center p-3">
             <div class="">
-              <img src="https://static.bangkokpost.com/media/content/20200619/c1_1937552_200619122619.jpg" class="card-img-top circle-img" height="150px" width="150px" alt="awoman">
+              <img src="https://flxt.tmsimg.com/assets/526093_v9_bc.jpg" class="card-img-top circle-img" height="150px" width="150px" alt="awoman">
             </div>
           </div>
           <div class="text-center">
-            <h4>Emma</h4>
+            <h4>Melissa</h4>
             <p class="font-italic">"The food was fresh, properly prepared and a great value for the price. We highly recommend it. The breakfast buffet on Sunday was equally as good."</p>
           </div>
         </div>
