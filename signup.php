@@ -18,24 +18,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Insert user data into the database (replace with your table name)
-    $sql = "INSERT INTO signup (username, password, email) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $username, $password, $email); // No need to hash the password
+    // Check if the email already exists
+    $checkDuplicateEmail = $conn->prepare("SELECT COUNT(*) FROM signup WHERE email = ?");
+    $checkDuplicateEmail->bind_param("s", $email);
+    $checkDuplicateEmail->execute();
+    $checkDuplicateEmail->bind_result($emailCount);
+    $checkDuplicateEmail->fetch();
+    $checkDuplicateEmail->close();
 
-    if ($stmt->execute()) {
-        echo "Registration successful!";
-        // You can redirect to a login page or perform other actions here.
+    if ($emailCount > 0) {
+        // An account with the same email already exists
+        echo "Error: An account with the same email already exists. Please use a different email.";
     } else {
-        echo "Error: " . $stmt->error;
+        // No duplicate email found, proceed to insert data
+        $sql = "INSERT INTO signup (username, password, email) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("sss", $username, $password, $email); // No need to hash the password
+
+        if ($stmt->execute()) {
+            echo "Registration successful!";
+            header("Location: index.html"); 
+            // You can redirect to a login page or perform other actions here.
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
     }
 
-    $stmt->close();
     $conn->close();
 }
-header("Location:index.php");
-
-var_dump($email);
-var_dump($username);
-var_dump($password);
 ?>

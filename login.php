@@ -17,28 +17,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         die("Connection failed: " . $conn->connect_error);
     }
 
-    // Fetch the hashed password from the database for the given username
-    $stmt = $conn->prepare("SELECT password FROM signup WHERE username = ?");
+    // Query the database for the user
+    $stmt = $conn->prepare("SELECT username, password FROM signup WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
-    $stmt->bind_result($hashedPassword);
+    $stmt->bind_result($dbUsername, $dbPassword);
     $stmt->fetch();
     $stmt->close();
 
-    // Verify the entered password against the hashed password from the database
-    if (password_verify($password, $hashedPassword)) {
-        // Password is correct
-        echo "Login successful!";
-        // You can redirect to a user dashboard or perform other actions here.
+    // Verify the entered username and password against the database
+    if ($username === $dbUsername && $password === $dbPassword) {
+        // Username and password are correct
+        header("Location: index.html"); // Redirect to the homepage
+        exit(); // Make sure to exit after redirection
     } else {
-        // Password is incorrect
+        // Username or password is incorrect
         echo "Invalid username or password";
     }
 
     $conn->close();
-    header("Location:index.php");
-} 
+}
 
-
+var_dump($username);
+var_dump($password);
 
 ?>

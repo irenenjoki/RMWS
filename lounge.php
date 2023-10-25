@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $payment = isset($_POST["payment"]) ? $_POST["payment"] : "";
     $message = isset($_POST["message"]) ? $_POST["message"] : "";
     
-   
+    
 
     // Use prepared statement
     $stmt = $conn->prepare("INSERT INTO restaurant (name, email, numberofperson, phone, date, time, payment, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");

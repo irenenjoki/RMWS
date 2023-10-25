@@ -29,7 +29,7 @@
                     <a class="nav-link text-dark" href="signup1.php">LOGIN </a>
                   </li>
                   <li class="nav-item footer-link-item">
-                    <a class="nav-link text-dark" href="index.php">HOME</a>
+                    <a class="nav-link text-dark" href="index.html">HOME</a>
                   </li>
                   <li class="nav-item footer-link-item">
                     <a class="nav-link text-dark" href="menu.html">MENU</a>
@@ -58,8 +58,10 @@
                 Come with family & feel the joy of mouthwatering food
               </h2>
             </div>
-            <a href="#" class="gotoupbtn"><i class="far fa-arrow-alt-circle-up"></i></a>
-          </div>
+            <div class="gotoupbtn">
+        <a href="#" class="gotoupbtn"><i class="far fa-arrow-alt-circle-up"></i></a>    
+      </div>
+              </div>
         </div>
       </header> 
      
@@ -167,7 +169,7 @@
               </div>
               <div class="col-lg-4 col-md-12 text-center">
                 <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" height="150" alt="Your choise logo">
-            <span>Big Launge</span>
+            <span>Big Lounge</span>
               </div>
               <div class="col-lg-4 col-md-12 text-center">
                 <hr class="pt-5 mt-5">
