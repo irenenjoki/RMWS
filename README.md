@@ -1,4 +1,4 @@
-![Screenshot (20)](https://github.com/irenenjoki/RMWS/assets/85219856/664afcce-d1d8-4dc5-95bc-a6d904787902)
+![Screenshot (24)](https://github.com/irenenjoki/RMWS/assets/85219856/d8ced513-1e16-4e13-8cd6-adfdc5dcbf65)
 
 # Big Lounge
 ### Big Lounge 👋
