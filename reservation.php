@@ -5,19 +5,246 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel = "icon" type = "image/png" href = "https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg">
+    <link rel = "icon" type = "image/png" href = "https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg">
     <link rel="stylesheet" href="style.css">
-    <title>Reservation</title>
+    <title>Big Square</title>
 </head>
+<style>
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: "Open Sans", sans-serif;
+  }
+  body{
+      background-color: #000002;
+  }
+  
+  .fs-30{
+      font-size: 30px;
+  }
+  .fs-50{
+      font-size: 50px;
+  }
+  html{
+     scroll-behavior: smooth;
+  }
+  p{
+      color: #f3f2ec;
+  }
+  /* footer */
+  
+  footer{
+    background-color:  #8f8c8c;
+     color:  #000000;
+     font-weight: bold;
+     text-decoration-line: none;
+     text-align: center;
+  }
+  
+  .footer-link-item{
+      color: #f1420d;
+      font-weight: bold;
+      text-decoration-line: none;
+  }
+  .footer-link-item:hover{
+      color: rgb(0, 0, 0);
+      font-weight: normal;
+  }
+  .icon-link{
+      color: rgb(235, 74, 10);
+      font-size: 40px;
+      font-weight: bold;
+  }
+  .icon-link:hover{
+      color: rgb(12, 12, 11);
+      font-weight: normal;
+  }
+  .gotoupbtn{
+     position: fixed;
+     width: 50px;
+     height: 50px;
+     background: #351002;
+     bottom: 40px;
+     right: 50px;
+     border-radius: 2px;
+     text-align: center;
+     line-height: 50px;
+     color: #056066;
+     font-size: 30px;
+     text-decoration: none;
+     cursor: pointer;
+     transition: 0.5s;
+     z-index: 1;
+  }
+  .gotoupbtn:hover{
+     font-size: 25px;
+     background: rgb(5, 1, 14);
+     color: rgb(248, 10, 10);
+     width: 48px;
+     height: 48px;
+     border-radius: 50%;
+  }
+  
+  .custom-btn:hover{
+      background-color: rgb(15, 163, 27);
+      font-weight: normal;
+      color: white;
+  }
+  /* Home page */
+  .circle-img{
+      border-radius: 50%;
+  }
+  .icon-style{
+      color: rgb(219, 21, 21);
+      font-size: 30px;
+  }
+  /*.shadow-bg{
+      background: rgb(228,228,228);
+      background: radial-gradient(circle, rgba(228,228,228,1) 17%, rgba(208,205,253,1) 18%, rgba(220,213,255,1) 30%, rgba(228,227,229,1) 37%, rgba(206,203,255,1) 55%);
+  }*/
+  .height-5{
+      height: 250px;
+  }
+  
+  /* menu */
+  
+  /* card */
+  
+    .card-menu:hover{
+      transform: scale(1.1);
+      transition: transform 0.3s;
+    }
+   
+    
+  .card-menu{
+      background-color: #0707077a;
+  }
+  .breadcrumb{
+      background-color: #0c090460;
+  }
+  .background-image-container {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for the darkness level */
+      z-index: 999;
+    }
+    .card-menu  img{
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+  }
+  
+  /*about*/
+  #bg{
+    background-attachment: fixed;
+    background-position: center;
+  }
+  .about{
+    width: 100;
+    height: 100;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+  }
+  .about .content img{
+    width: 600px;
+    max-width: 100%;
+    box-shadow: 0 5px 15px 0px rgba(226, 138, 5, 0.5);
+  }
+  
+  .about .content img:hover{
+    width: 630px;
+    max-width: 130%;
+  }
+  .text{
+    width: 550px;
+    max-width: 100%;
+  }
+  
+  .content{
+    width: 1280px;
+    max-width: 95%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .text h1 {
+    color: #f76e13;
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+   .text p{
+    font-size: 18px;
+    margin-bottom: 70px;
+      color: #0f0f0f;
+  }
+  
+  /* contact us */
+  h2{
+      color: #0c6611;
+      font-size: xx-large;
+  }
+  h3{
+      color: #0c6611;
+  }
+  h4{
+      color: #0c6611;
+  }
+  
+  ::-webkit-scrollbar {
+      width: 5px;
+      height: 7px;
+  }
+  
+  /* Track (background of the scrollbar) */
+  ::-webkit-scrollbar-track {
+      background:transparent; /* Change the background color */
+  }
+  
+  /* Scrollbar thumb (the draggable part) */
+  ::-webkit-scrollbar-thumb {
+      background: #eb6003; /* Change the color of the thumb */
+      border-radius: 6px; /* Add rounded corners */
+  }
+  
+  /* On hover, the thumb will have a different color */
+  ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+  }
+  
+  .form{
+      box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+  }
+  
+      .reviews .content img:hover{
+          width: 630px;
+          max-width: 130%;
+      }
+      .reviews{
+          box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+      }
+      .index{
+          box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+      }
+  
+</style>
 <body> 
     <header>
         <div  style="background-image: url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80); background-attachment: fixed; height: 600px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
           <div class="overlay"></div>
           <!-- navbar -->
-          <nav class="nav navbar fixed-top navbar-expand-lg navbar-dark p-md-3 bg-dark-transparent">
+          <nav class="nav navbar fixed-top navbar-expand-lg bg-light-transparent" style="background-color: rgba(0, 0, 0, 0.781);">
             <div class="container">
               <a class="navbar-brand" href="#">
-                <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" height="50" alt="Your choise logo">
+              <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg" height="50" alt="Your choise logo">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,22 +253,22 @@
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                   <li class="nav-item footer-link-item">
-                    <a class="nav-link text-dark" href="signup1.php">LOGIN </a>
-                  </li>
-                  <li class="nav-item footer-link-item">
-                    <a class="nav-link text-dark" href="index.html">HOME</a>
-                  </li>
-                  <li class="nav-item footer-link-item">
-                    <a class="nav-link text-dark" href="menu.html">MENU</a>
-                  </li>
-                  <li class="nav-item active footer-link-item">
-                    <a class="nav-link text-dark" href="reservation.php">RESERVATION</a>
-                  </li>
-                  <li class="nav-item footer-link-item">
-                    <a class="nav-link text-dark" href="contact.html">CONTACT US</a>
-                  </li>
-                  <li class="nav-item footer-link-item">
-                    <a class="nav-link text-dark" href="about.html">ABOUT US</a>
+                  <a class="nav-link"style="color:rgb(255, 72, 0)" href="signup1.php">LOGIN </a>
+              </li>
+              <li class="nav-item active footer-link-item">
+                <a class="nav-link"style="color:rgb(255, 72, 0)" href="index.html">HOME</a>
+              </li>
+              <li class="nav-item footer-link-item">
+                <a class="nav-link"style="color:rgb(255, 72, 0)" href="menu.html">MENU</a>
+              </li>
+              <li class="nav-item footer-link-item">
+                <a class="nav-link"style="color:rgb(255, 72, 0)" href="reservation.php">RESERVATION</a>
+              </li>
+              <li class="nav-item footer-link-item">
+                <a class="nav-link"style="color:rgb(255, 72, 0)" href="contact.html">CONTACT US</a>
+              </li>
+              <li class="nav-item footer-link-item">
+                <a class="nav-link"style="color:rgb(255, 72, 0)" href="about.html">ABOUT US</a>
                   </li>
                   
                 </ul>
@@ -52,9 +279,9 @@
           <div class="container flex-column d-flex justify-content-center"style=" height: 600px;">
             <div class="text-center py-4" >
               <h1 class="text-white py-3" >
-                <span class="font-weight-bold" style="font-size:1.5cm; color:rgb(216, 13, 47)">RESERVATION</span>
+                <span class="font-weight-bold" style="font-size:1.5cm; color:rgb(255, 72, 0)">RESERVATION</span>
               </h1>
-              <h2 class="font-weight-normal font-italic" style="font-size:1.5cm; color:rgb(216, 13, 47)"  >
+              <h2 class="font-weight-normal font-italic" style="font-size:1.5cm; color:rgb(255, 72, 0)"  >
                 Come with family & feel the joy of mouthwatering food
               </h2>
             </div>
@@ -168,7 +395,7 @@
                 <hr class="pt-5 mt-5">
               </div>
               <div class="col-lg-4 col-md-12 text-center">
-                <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" height="150" alt="Your choise logo">
+              <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg"height="150" alt="Your choise logo">
             <span>Big Lounge</span>
               </div>
               <div class="col-lg-4 col-md-12 text-center">
@@ -192,7 +419,7 @@
           <i class="fas fa-envelope-open-text fs-30"></i>
           <a href="mailto:irenewaweru9@gmail.com"><span class="footer-link-item"> irenewaweru9@gmail.com</span></a>
           </div>
-            <p id="current-year"></p> 
+            <p style="color:#000002"id="current-year"></p> 
         </footer>
     </div> <!--footer end-->
       

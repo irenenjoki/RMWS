@@ -8,28 +8,432 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel = "icon" type = "image/png" href = "https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg">
+  <link rel = "icon" type = "image/png" href = "https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg">
   <link rel="stylesheet" href="style.css">
-  <title>Home</title>
+  <title>Big Square</title>
   
 </head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    background-color: #000002;
+}
+
+.fs-30{
+    font-size: 30px;
+}
+.fs-50{
+    font-size: 50px;
+}
+html{
+   scroll-behavior: smooth;
+}
+p{
+    color: #f3f2ec;
+}
+/* footer */
+
+footer{
+  background-color:  #8f8c8c;
+   color:  #000000;
+   font-weight: bold;
+   text-decoration-line: none;
+   text-align: center;
+}
+
+.footer-link-item{
+    color: #f1420d;
+    font-weight: bold;
+    text-decoration-line: none;
+}
+.footer-link-item:hover{
+    color: rgb(0, 0, 0);
+    font-weight: normal;
+}
+.icon-link{
+    color: rgb(235, 74, 10);
+    font-size: 40px;
+    font-weight: bold;
+}
+.icon-link:hover{
+    color: rgb(12, 12, 11);
+    font-weight: normal;
+}
+.gotoupbtn{
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   background: #351002;
+   bottom: 40px;
+   right: 50px;
+   border-radius: 2px;
+   text-align: center;
+   line-height: 50px;
+   color: #056066;
+   font-size: 30px;
+   text-decoration: none;
+   cursor: pointer;
+   transition: 0.5s;
+   z-index: 1;
+}
+.gotoupbtn:hover{
+   font-size: 25px;
+   background: rgb(5, 1, 14);
+   color: rgb(248, 10, 10);
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+}
+
+.custom-btn:hover{
+    background-color: rgb(15, 163, 27);
+    font-weight: normal;
+    color: white;
+}
+/* Home page */
+.circle-img{
+    border-radius: 50%;
+}
+.icon-style{
+    color: rgb(219, 21, 21);
+    font-size: 30px;
+}
+/*.shadow-bg{
+    background: rgb(228,228,228);
+    background: radial-gradient(circle, rgba(228,228,228,1) 17%, rgba(208,205,253,1) 18%, rgba(220,213,255,1) 30%, rgba(228,227,229,1) 37%, rgba(206,203,255,1) 55%);
+}*/
+.height-5{
+    height: 250px;
+}
+
+/* menu */
+
+/* card */
+
+  .card-menu:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+ 
+  
+.card-menu{
+    background-color: #0707077a;
+}
+.breadcrumb{
+    background-color: #0c090460;
+}
+.background-image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) for the darkness level */
+    z-index: 999;
+  }
+  .card-menu  img{
+  width: 600px;
+  max-width: 100%;
+  box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+}
+
+/*about*/
+#bg{
+  background-attachment: fixed;
+  background-position: center;
+}
+.about{
+  width: 100;
+  height: 100;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+.about .content img{
+  width: 600px;
+  max-width: 100%;
+  box-shadow: 0 5px 15px 0px rgba(226, 138, 5, 0.5);
+}
+
+.about .content img:hover{
+  width: 630px;
+  max-width: 130%;
+}
+.text{
+  width: 550px;
+  max-width: 100%;
+}
+
+.content{
+  width: 1280px;
+  max-width: 95%;
+  align-items: center;
+  justify-content: space-around;
+}
+.text h1 {
+  color: #f76e13;
+  font-size: 50px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+  p{
+  font-size: 18px;
+  margin-bottom: 70px;
+    color: #0f0f0f;
+}
+
+/* contact us */
+h2{
+    color: #0c6611;
+    font-size: xx-large;
+}
+h3{
+    color: #0c6611;
+}
+h4{
+    color: #0c6611;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 7px;
+}
+
+/* Track (background of the scrollbar) */
+::-webkit-scrollbar-track {
+    background:transparent; /* Change the background color */
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: #eb6003; /* Change the color of the thumb */
+    border-radius: 6px; /* Add rounded corners */
+}
+
+/* On hover, the thumb will have a different color */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.form{
+    box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+}
+
+    .reviews .content img:hover{
+        width: 630px;
+        max-width: 130%;
+    }
+    .reviews{
+        box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+    }
+    .index{
+        box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
+    }
+/*-----------------------------------*\
+  #MENU
+\*-----------------------------------*/
+
+.menu .section-title { margin-block-end: 40px; }
+
+.menu .grid-list { margin-block-end: 40px; }
+
+.menu-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.hover\:card .card-banner { background-color: var(--gold-crayola); }
+
+.hover\:card .card-banner .img-cover { transition: var(--transition-2); }
+
+.hover\:card:is(:hover, :focus-within) .card-banner .img-cover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.menu-card .card-banner {
+  flex-shrink: 0;
+  border-radius: var(--radius-24);
+}
+
+.menu-card .card-title { transition: var(--transition-1); }
+
+.menu-card .card-title:is(:hover, :focus-visible) { color: var(--gold-crayola); }
+
+.menu-card .badge {
+  background-color: var(--gold-crayola);
+  color: var(--eerie-black-1);
+  font-family: var(--fontFamily-forum);
+  max-width: max-content;
+  line-height: var(--lineHeight-6);
+  text-transform: uppercase;
+  padding-inline: 10px;
+  margin-block-start: 10px;
+}
+
+.menu-card .span {
+  color: var(--gold-crayola);
+  margin-block: 10px;
+}
+
+.menu-card .card-text {
+  color: var(--quick-silver);
+  line-height: var(--lineHeight-4);
+}
+
+.menu-text .span {
+  display: inline-block;
+  color: var(--gold-crayola);
+}
+
+.menu .btn {
+  margin-inline: auto;
+  margin-block-start: 26px;
+}
+
+.menu .shape {
+  display: block;
+  width: 70%;
+}
+
+.menu .shape-2 {
+  top: 0;
+  left: 0;
+}
+
+.menu .shape-3 {
+  bottom: 0;
+  right: 0;
+}
+.section {
+  position: relative;
+  padding-block: var(--section-space);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bg-black-10 { background-color: var(--smoky-black-2); }
+
+.grid-list {
+  display: grid;
+  gap: 2px;
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  position: relative; /* Establish positioning context for pseudo-elements */
+}
+
+.menu-card {
+  border: 0px solid #ccc;
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Establish positioning context for pseudo-elements */
+}
+
+.menu-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%); /* Center the line vertically */
+  border-left: 1px solid #ccc; /* Adjust line styles as needed */
+  height: 80%; /* Adjust the line height */
+}
+
+.title-wrapper {
+  position: relative; /* Establish positioning context for pseudo-elements */
+  display: flex; /* Use a flex container to align items horizontally */
+  justify-content: space-between; /* Spread items horizontally */
+  align-items: left; /* Vertically align items */
+}
+
+.title-wrapper::before {
+  content: "";
+  position: absolute;
+  height:1px;
+  right: 50%;
+  left: 0%;
+  width: 100%;
+  background-color: #f1420d;
+}
+.line {
+  flex: 12; /* Create space and expand the line to fill it */
+  border-top: 1px solid #d41313; /* Adjust the line styles as needed */
+  margin: 0 10px; /* Adjust the space between the line and text */
+}
+
+.overlay {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Overlay background with transparency */
+}
+
+.content {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  background: #ffffff0a; /* Background color for content */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #07060675;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+  color: #ec540e;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change link color on hover */
+.dropdown-content a:hover {
+  background-color: #0d4103;
+  color: white;
+}
+
+/* Show the dropdown content when the button is hovered over */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+</style>
 <body>
      
- <!-- Preloader -->
- <div id="preloader" data-preload>
-  <div id="#loader">
-  </div>
+ 
   
   <header>
     
-  </div>
-    <div  style="background-image: url(https://media.istockphoto.com/id/1215178290/photo/stir-fry-noodles-with-vegetables-and-beef-in-black-bowl-slate-background-close-up.jpg?s=612x612&w=0&k=20&c=_svdOGLzJ52q1Mf_k6v5u5Xc5iRkH0DIYrwmrfKTaJ4=); background-attachment: fixed; height: 600px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover;">
-      <div class="overlay"></div>
+  
+  <div style="background-image: url(https://bigsquare.co.ke/wp-content/uploads/2020/04/Garden-City-Karaoke-1-min-scaled.jpg); background-attachment: fixed; height: 630px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
+
+    <!-- Add an overlay for the background image -->
+    <div class="overlay">
       <!-- navbar -->
-      <nav class="nav navbar fixed-top navbar-expand-lg navbar-dark p-md-3 bg-dark-transparent">
+      <nav class="nav navbar fixed-top navbar-expand-lg bg-light-transparent" style="background-color: rgba(0, 0, 0, 0.678);">
         <div class="container">
-          <a class="navbar-brand" href="#">
-            <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" height="50" alt="Your choise logo">
+          <a class="navbar-brand" href="#" >
+            <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg" height="50" alt="Your choise logo">
           </a>
           <!--class="navbar-toggler": This attribute assigns the class "navbar-toggler" to the <button>. 
             data-toggle="collapse": This data attribute is specific to Bootstrap and indicates that this 
@@ -55,57 +459,72 @@
           
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-              <li class="nav-item footer-link-item">
-                <a class="nav-link text-dark" href="signup1.php">LOGIN </a>
-              </li>
-              <li class="nav-item active footer-link-item">
-                <a class="nav-link text-dark" href="index.html">HOME</a>
-              </li>
-              <li class="nav-item footer-link-item">
-                <a class="nav-link text-dark" href="menu.html">MENU</a>
-              </li>
-              <li class="nav-item footer-link-item">
-                <a class="nav-link text-dark" href="reservation.php">RESERVATION</a>
-              </li>
-              <li class="nav-item footer-link-item">
-                <a class="nav-link text-dark" href="contact.html">CONTACT US</a>
-              </li>
-              <li class="nav-item footer-link-item">
-                <a class="nav-link text-dark" href="about.html">ABOUT US</a>
-              </li>
-             
-             
+                <li class="nav-item footer-link-item">
+                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="signup1.php">LOGIN</a>
+                </li>
+                <li class="nav-item footer-link-item dropdown"> <!-- Added the "dropdown" class -->
+                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="index.html">HOME</a>
+                    <div class="dropdown-content"> <!-- Added the dropdown content container -->
+                        <a href="#about">About us</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#special">Special</a>
+                        <a href="#reviews">Reviews</a>
+                    </div>
+                </li>
+                <li class="nav-item footer-link-item">
+                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="menu.html">MENU</a>
+                </li>
+                <li class="nav-item footer-link-item">
+                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="reservation.php">RESERVATION</a>
+                </li>
+                <li class="nav-item footer-link-item">
+                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="contact.html">CONTACT US</a>
+                </li>
+                <li class="nav-item footer-link-item">
+                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="about.html">ABOUT US</a>
+                </li>
             </ul>
-          </div> <!--collapse end-->
-        </div> <!--container end-->
-      </nav> <!--navbar end-->
-      
-      <div class="container flex-column d-flex justify-content-center"style=" height: 600px;">
-        <div class="text-center py-4" >
-          <h1 style="font-size:1.4cm; color:rgb(8, 201, 153)"class=" py-3">
-            Welcome to <span class="font-weight-bold" >YOUR CHOICE</span> restaurant
-          </h1>
-          <h3 class="font-weight-normal  font-italic" style="font-size:1.4cm; color:rgb(8, 201, 153)">
-            Choose Delicious Food With Sweet Memo!
-          </h3>
-          <div class>
-            <a href="reservation.php" class="btn btn-dark">RESERVATION</a>
-          </div>
         </div>
-        <div class="gotoupbtn">
+         <!--collapse end-->
+        </div> <!--container end-->
+      </nav> <!--navbar end--><br><br><br>
+      
+      
+     
+      
+        <!-- Add a container for text on the left -->
+        <div class="container flex-column d-flex justify-content-center" style=" height: 600px;">
+          <div class="text-center py-4" >
+            
+            <h1 class=" font-weight-bold py-3" style="font-size:2cm; color:rgb(230, 88, 6)">
+              BIG 
+              <br>SQUARE
+            </h1>
+            <h2 class="font-weight-normal  font-italic" style="font-size:1.5cm; color:rgb(243, 94, 9)">
+              Where Every Flavour Tells A Story!!
+              </h2>
+          </div>
+      </div>
+      </div>
+      
+         
+     <div class="gotoupbtn">
           <a href="#" class="gotoupbtn"><i class="far fa-arrow-alt-circle-up"></i></a>    
         </div>      
-      </div>
-    </div>
+  </div>
+  
   </header>
   <br><br><br>
+  <a name="about"></a>
+
   <section>
     <div class="container">
       <div class="index">
       <div class="row shadow py-3 my-3">
         <div class="col-12 text-center">
-          <h3 class>About us</h3>
-          <p>We're the best in our field, and it's all thanks to the incredible relationships we've ed with our 
+          
+          <h3 class >About us</h3>
+          <p style="color: white;">We're the best in our field, and it's all thanks to the incredible relationships we've ed with our 
             clients. Unlike our competitors, we're invested in developing a personal connection with each and every 
             one of our customers, by providing quality service and being available to you 24/7. Get in touch with us
              when you're ready to learn more: we can't wait to meet you!</p>
@@ -113,223 +532,234 @@
         </div>
       </div> <!--row end-->
     </div> <!--container end-->
-    <div class="container">
+   
       
+     
+    <div class="container">
       <div class="row py-3 my-3 px-5">
-        <div class="col-12  text-center">
-          <h3>Our Menus</h3>
-        </div>
-        <div class="col-lg-4 col-sm-12">
-          <div class="card">
-           
-            <img src="https://thumbs.dreamstime.com/b/pasta-bolognese-linguine-mincemeat-tomatoes-italian-dinner-two-parmesan-cheese-dark-blue-tablecloth-chair-homeliness-169400490.jpg" class="card-img-top" height="auto" alt="Home Page Menu 1">
-            <div class="card-body">
-              <h4 class="card-title text-center">Bakers & Roasters</h4>
-              <div class="text-justify">
-                <h4>About</h4>
-                <p>Brunch Restaurant,Serving breakfast, brunch, 
-                  lunch,cakes, coffee, NZ wines, beers and cocktails.Head Chef  and his team prepare 
-                  pure dishes full of flavour. Always seasonal and made with love.</p>
-              </div>
-              
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
-                View all details
-              </button>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content shadow-bg">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="py-2">
-                        <h6>CUISINES</h6>
-                        <p>Italian, Cafe, European, Healthy, Contemporary</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>SPECIAL DIETS</h6>
-                        <p>Vegetarian Friendly, Vegan Options, Gluten Free Options</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>MEALS</h6>
-                        <p>Breakfast, Lunch, Brunch, Drinks</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>FEATURES</h6>
-                        <p>Outdoor Seating, Seating, Street Parking, Highchairs Available, Serves Alcohol, 
-                          Accepts Mastercard, Accepts Visa, Free Wifi, Accepts Credit Cards, Table Service, 
-                          Gift Cards Available</p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="menu.html"><button type="button" class="btn btn-primary">Learn more</button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!--card end-->
-        </div>
-        <div class="col-lg-4 col-sm-12">
-          <div class="card">
-            <img src="https://media.istockphoto.com/photos/french-fries-and-chicken-burger-on-a-wooden-table-food-junk-food-and-picture-id1205589913?k=20&m=1205589913&s=170667a&w=0&h=gyHV4clLzufZHZBdlRyO5dqQqI1djR-tvCHP8gY7zjs=" class="card-img-top" height="auto" alt="Home Page Menu 1">
-            <div class="card-body">
-              <h4 class="card-title text-center">Palmyra Syrian</h4>
-              <div class="text-justify">
-                <h4>About</h4>
-                <p>Palmyra, nicknamed city of thousand columns , is a Syrian archaeological site 
-                  located in the government of Syria . We want to give you a taste of our culinary 
-                  Syrian cusine with real authentic dishes made by our experienced Syrian cook Ibrahim Shamoun</p>
-              </div>
-              
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
-                View all details
-              </button>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="py-2">
-                        <h6>CUISINES</h6>
-                        <p>Lebanese, Middle Eastern, Arabic, Chinese</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>SPECIAL DIETS</h6>
-                        <p>Vegetarian Friendly, Vegan Options</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>MEALS</h6>
-                        <p>Lunch, Dinner, Drinks</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>FEATURES</h6>
-                        <p>Takeout, Reservations, Seating, Serves Alcohol, Free Wifi, Accepts Credit Cards, 
-                          Table Service, Wine and Beer</p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="menu.html"><button type="button" class="btn btn-primary">Learn more</button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!--card end-->
-        </div>
-        <div class="col-lg-4 col-sm-8">
-          <div class="card">
-            <img src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2018/1/30/0/FNK_Berry-Dessert-Lasagna-H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1517349652859.jpeg" class="card-img-top" height="auto" alt="Home Page Menu 1">
-            <div class="card-body">
-              <h4 class="card-title text-center">Deserts</h4>
-              <div class="text-justify">
-                <h4>About</h4>
-                <p>PURE. HONEST. PASSION.<br>Enjoy our wide range of flavors,textures,and form of deserts offered by your restaurant of choice.
-                  Welcome and experience sweetness. &#128522;
-                </p>
-              </div>
-              
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal">
-                View all details
-              </button>
-              
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Details</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      <div class="py-2">
-                        <h6>CUISINES</h6>
-                        <p>European</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>SPECIAL DIETS</h6>
-                        <p>Vegetarian Friendly, Vegan Options, Gluten Free Options</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>MEALS</h6>
-                        <p>Dinner</p>
-                      </div>
-                      <div class="py-2">
-                        <h6>FEATURES</h6>
-                        <p>Reservations, Seating, Street Parking, Wheelchair Accessible, Serves Alcohol, Full Bar, Free Wifi, Accepts Credit Cards, Table Service</p>
-                      </div>
-                    </div>
-                    <div class="modal-footer">
-                      <a href="menu.html"><button type="button" class="btn btn-primary">Learn more</button></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> <!--card end-->
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
         <div class="col-12 p-3 text-center">
-          <a href="menu.html" class="btn btn-dark">Learn more</a>
+          <h3>Our Menus</h3>
+          <section class="section menu" aria-label="menu-label" id="menu">
+            <div class="container">
+    
+              
+    
+              <h2 class="headline-1 section-title text-center" style="color: #f1420d; font-weight:bolder">Delicious Menu</h2>
+    
+              <ul class="grid-list">
+    
+                <li>
+                  <div class="menu-card hover:card">
+    
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                      <img src="https://www.rachelcooks.com/wp-content/uploads/2021/05/slow-cooker-ribs-web-1-of-5-square.jpg" width="100" height="100" loading="lazy" alt="Greek Salad"
+                        class="img-cover">
+                    </figure>
+    
+                    <div>
+    
+                      <div class="title-wrapper">
+                        <h3 class="title-3">
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder">Pork Ribs&Chips</a>
+                        </h3>
+    
+                      
+    
+                        <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder;margin-left: 200px;">$25.50</span>
+                        <div class="line"></div>
+                      </div>
+    
+                  
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li>
+                  <div class="menu-card hover:card">
+    
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                      <img src="https://www.cookingclassy.com/wp-content/uploads/2019/08/breakfast-burrito-01.jpg" width="100" height="100" loading="lazy" alt="Lasagne"
+                        class="img-cover">
+                    </figure>
+    
+                    <div>
+    
+                      <div class="title-wrapper">
+                        <h3 class="title-3">
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder">Burittos</a>
+                        </h3>
+    
+                        <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder; margin-left: 200px;">$40.00</span>
+                        <div class="line"></div>
+                      </div>
+    
+                     
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li>
+                  <div class="menu-card hover:card">
+    
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                      <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/57/7d/17/2-egg-breakfast.jpg" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
+                        class="img-cover">
+                    </figure>
+    
+                    <div>
+    
+                      <div class="title-wrapper">
+                        <h3 class="title-3">
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder">Bread tosat&eggs</a>
+                        </h3>
+    
+                        <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder; margin-left: 200px;">$10.00</span>
+                        <div class="line"></div>
+                      </div>
+    
+                      
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li>
+                  <div class="menu-card hover:card">
+    
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                      <img src="https://www.kitchensanctuary.com/wp-content/uploads/2023/07/Salt-and-Pepper-ribs-Square-FS.jpg" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
+                        class="img-cover">
+                    </figure>
+    
+                    <div>
+    
+                      <div class="title-wrapper">
+                        <h3 class="title-3">
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder">Pork Ribs</a>
+                        </h3>
+    
+    
+                        <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder;margin-left: 200px;">$39.00</span>
+                        <div class="line"></div>
+                      </div>
+    
+                     
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li>
+                  <div class="menu-card hover:card">
+    
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                      <img src="https://www.yum.co.ke/media/gallery_photos/Big_Square_Crispy_Fried_Chicken__chips.jpg.800x0_q85.jpg" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
+                        class="img-cover">
+                    </figure>
+    
+                    <div>
+    
+                      <div class="title-wrapper">
+                        <h3 class="title-3">
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder"> Chicken Fries</a>
+                        </h3>
+    
+                        <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder;margin-left: 200px;">$25.00</span>
+                        <div class="line"></div>
+                      </div>
+    
+                     
+    
+                    </div>
+    
+                  </div>
+                </li>
+    
+                <li>
+                  <div class="menu-card hover:card">
+    
+                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                      <img src="https://us.123rf.com/450wm/meykitchen/meykitchen2306/meykitchen230611646/207417251-three-milkshakes-chocolate-strawberry-professional-food-photography-ai-generated.jpg?ver=6" width="100" height="100" loading="lazy" alt="Opu Fish"
+                        class="img-cover">
+                    </figure>
+    
+                    <div>
+    
+                      <div class="title-wrapper">
+                        <h3 class="title-3">
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder"> Milkshakes</a>
+                        </h3>
+    
+                        <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder;margin-left: 200px;">$49.00</span>
+                        <div class="line"></div>
+                      </div>
+                    </div>
+                    
+                    </div>
+                   
+                    </div>
+                    <a href="menu.html" class="btn btn-dark">Learn more</a>
+                    </div>
+            </div>
+          </div>
+          
+                  </div>
+                </li>
+    
+              </ul>
+              </div>
+          </section>
         </div>
-      </div> <!--row end-->
+        
+        </div>
+           
+        <a name="special"></a>
+           
       <div class="row shadow py-3 my-3 justify-content-center">
         <div class="col-12 p-3 text-center">
           <h3>Special</h3>
         </div>
         <div class="col-md-3 col-sm-9 text-center p-md-5 p-sm-2">
           <i class="far fa-gem icon-style"></i>
-          <h6 class="p-2">Best Quality</h6>
+          <h6 class="p-2" style="color: #f5f2f0;">Best Quality</h6>
           <p class="text-muted px-2">We guarantee your full satisfaction</p>
         </div>
         <div class="col-md-3 col-sm-9 text-center p-md-5 p-sm-2">
           <i class="far fa-clock icon-style"></i>
-          <h6 class="p-2">24/7 Support</h6>
+          <h6 class="p-2" style="color: #f8f6f5;">24/7 Support</h6>
           <p class="text-muted px-2">Our phone support is always available to you</p>
         </div>
         <div class="col-md-3 col-sm-9 text-center p-md-5 p-sm-2">
           <i class="fas fa-medal icon-style"></i>
-          <h6 class="p-2">Competitive Pricing</h6>
+          <h6 class="p-2" style="color: #f8f6f4;">Competitive Pricing</h6>
           <p class="text-muted px-2">The best value for money</p>
         </div>
         <div class="col-12 text-center">
           <a href="contact.html" class="btn btn-dark">Contact us</a>
         </div>
       </div> <!--row end-->
+      <a name="reviews"></a>
+
       <div class="reviews">
       <div class="row shadow py-3 my-3">
         <div class="col-12 p-3 text-center">
-          <h3>Customer reviews</h3>
+        <h3>Customer reviews</h3>
         </div>
         <div class="col-md-4 col-sm-12 p-md-5 p-sm-2">
           <div class="d-flex justify-content-center p-3">
             <div class="">
-              <img src="https://flxt.tmsimg.com/assets/526093_v9_bc.jpg" class="card-img-top circle-img" height="150px" width="150px" alt="awoman">
+              <img src="https://www.usatoday.com/gcdn/presto/2019/10/10/USAT/6b9a2318-4fba-4124-ada4-1c18217a3d0d-BRice_Headshot1.JPG?crop=1894,1834,x0,y0" class="card-img-top circle-img" height="150px" width="150px" alt="awoman">
             </div>
           </div>
           <div class="text-center">
             <h4>Melissa</h4>
-            <p class="font-italic">"The food was fresh, properly prepared and a great value for the price. We highly recommend it. The breakfast buffet on Sunday was equally as good."</p>
+            <p class="font-italic" style="color: white;">"The food was fresh, properly prepared and a great value for the price. We highly recommend it. The breakfast buffet on Sunday was equally as good."</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-12 p-md-5 p-sm-2">
@@ -340,7 +770,7 @@
           </div>
           <div class="text-center">
             <h4>Olivia</h4>
-            <p class="font-italic">"Hello. Please give our thanks to the Manager(s) and others for the wonderful room and bottle of sparkling wine for our Anniversary stay. We had an amazing time. The room was so comfortable, the food at Echo absolutely spectacular (we ate two meals there). Our waitress was just wonderful. Looking forward to staying with you in the future. What a great place!"</p>
+            <p class="font-italic" style="color: white;">"Hello. Please give our thanks to the Manager(s) and others for the wonderful room and bottle of sparkling wine for our Anniversary stay. We had an amazing time. The room was so comfortable, the food at Echo absolutely spectacular (we ate two meals there). Our waitress was just wonderful. Looking forward to staying with you in the future. What a great place!"</p>
           </div>
         </div>
         <div class="col-md-4 col-sm-12 p-md-5 p-sm-2">
@@ -351,7 +781,7 @@
           </div>
           <div class="text-center">
             <h4>Liam</h4>
-            <p class="font-italic">"Had dinner with friends. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. Will be back definitely!"</p>
+            <p class="font-italic" style="color: white;">"Had dinner with friends. Menu is perfect, something for everyone. Service was awesome and Jason was very accommodating. Will be back definitely!"</p>
           </div>
         </div>
       </div> 
@@ -368,7 +798,7 @@
             <hr class="pt-5 mt-5">
           </div>
           <div class="col-lg-4 col-md-12 text-center">
-            <img src="https://as2.ftcdn.net/v2/jpg/04/49/08/29/1000_F_449082911_6ZdzRkrvCiMWc0NtKPssWj0F4INYF2Da.jpg" height="150" alt="Your choise logo">
+            <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg"height="150" alt="Your choise logo">
         <span>Big Lounge</span>
           </div>
           <div class="col-lg-4 col-md-12 text-center">
@@ -392,7 +822,7 @@
 			<i class="fas fa-envelope-open-text fs-30"></i>
 			<a href="mailto:irenewaweru9@gmail.com"><span class="footer-link-item"> irenewaweru9@gmail.com</span></a>
 		  </div>
-        <p id="current-year"></p> 
+        <p style="color:#000002"id="current-year"></p> 
     </footer>
 </div> <!--footer end--> 
   

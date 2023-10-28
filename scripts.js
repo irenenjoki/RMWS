@@ -45,3 +45,25 @@ console.log(document.querySelector('input[name="message"]').value);
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const reviewForm = document.getElementById('reviewForm');
+    const reviewList = document.getElementById('reviewList');
+
+    reviewForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Get user input
+        const name = document.getElementById('name').value;
+        const reviewText = document.getElementById('review').value;
+
+        // Create a new review item
+        const reviewItem = document.createElement('li');
+        reviewItem.innerHTML = `<strong>${name}:</strong> ${reviewText}`;
+
+        // Append the review to the list
+        reviewList.appendChild(reviewItem);
+
+        // Clear the form
+        reviewForm.reset();
+    });
+});
