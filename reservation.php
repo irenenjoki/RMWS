@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel = "icon" type = "image/png" href = "https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg">
     <link rel="stylesheet" href="style.css">
-    <title>Big Square</title>
+    <title>Reservations</title>
 </head>
 <style>
   *{
@@ -234,7 +234,63 @@
       .index{
           box-shadow: 0 5px 15px 0px rgba(5, 226, 71, 0.5);
       }
-  
+    
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.slide {
+    flex: 0 0 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.slide img {
+    max-width: 100%;
+    max-height: 70%;
+}
+
+.text-container {
+    background-color:black;
+    padding: 20px;
+    border: 0px solid #ccc;
+    border-radius: 0px;
+}
+
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #333;
+    color:rgb(255, 72, 0);
+    border: none;
+    cursor: pointer;
+}
+
+.prev-button {
+    left: 0;
+}
+
+.next-button {
+    right: 0;
+}
+img {
+    float: left;
+    margin: 0px 0px 15px 20px;
+  }
+  .text-img {
+  float: right;
+  border: 1px dotted black;
+  margin: 0px 0px 15px 20px;
+}
+/* Additional styling for text and buttons */
 </style>
 <body> 
     <header>
@@ -243,7 +299,7 @@
           <!-- navbar -->
           <nav class="nav navbar fixed-top navbar-expand-lg bg-light-transparent" style="background-color: rgba(0, 0, 0, 0.781);">
             <div class="container">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.html">
               <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg" height="50" alt="Your choise logo">
               </a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -252,9 +308,6 @@
               
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item footer-link-item">
-                  <a class="nav-link"style="color:rgb(255, 72, 0)" href="signup1.php">LOGIN </a>
-              </li>
               <li class="nav-item active footer-link-item">
                 <a class="nav-link"style="color:rgb(255, 72, 0)" href="index.html">HOME</a>
               </li>
@@ -299,9 +352,88 @@
               <h2 style="font-weight: 600;">BOOK A TABLE</h2>
               <p>We look forward to welcoming you back</p>
               <p class="px-md-5 px-sm-2 mx-5">Please note that we require card details to secure your booking. In the event that the reservation is not cancelled with 24 hours' notice, it will result in a charge of sh200 per guest.</p>
-              <hr>
+             
+            
+            <div class="slider-container">
+        <div class="slide">
+            <div class="text-container">
+                
             </div>
-          </div> <!--row end-->
+            <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/adult-party-min.png" alt="Slide 1">
+            <h1 style="color:white; font-size:1.6cm; font-family:Copperplate, Papyrus, fantasy;">ADULTS PARTY PACKAGE I <p style="font-size:0.5cm;color:rgb(241, 81, 7)">*ksh. 2500 per person for a minimum of 8 
+            <br>people</p><p style="font-size:0.4cm; font-weight:lighter">Food<br><br>
+            Big wings,samosas,spring roll starter combo.<br>
+            A platter each or large pizza+ a salad of your choice<br><br>
+            Desert<br> 
+          Choice of cake or sundae<br><br>
+          Drink<br>
+          Glass of wine or mimmosa,beer,soda or bottle of water.
+          </p></h1>
+                
+        </div>
+        <div class="slide">
+            <div class="text-container">
+                
+            </div>
+            <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/adult-party-min.png" alt="Slide 2">
+            <h1 style="color:white; font-size:1.6cm; font-family:Copperplate, Papyrus, fantasy;">ADULTS PARTY PACKAGE II <p style="font-size:0.5cm;color:rgb(241, 81, 7)">*ksh. 1900 per person for a minimum of 8 
+            <br>people</p><p style="font-size:0.4cm; font-weight:lighter">Food<br><br>
+            Big wings,samosas,spring roll starter combo.<br>
+            A platter each or large pizza+ a salad of your choice<br><br>
+            Desert<br> 
+          Choice of cake or sundae<br><br>
+          Drink<br>
+         One fruit juice & 500ml water bottle per person.
+          </p></h1>
+                <p></p>
+        </div>
+        <div class="slide">
+            <div class="text-container">
+                
+            </div>
+            <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/adult-party-min.png" alt="Slide 2">
+            <h1 style="color:white; font-size:1.6cm; font-family:Copperplate, Papyrus, fantasy;">ADULTS PARTY PACKAGE III <p style="font-size:0.5cm;color:rgb(241, 81, 7)">*ksh. 1200 per person for a minimum of 8 
+            <br>people</p><p style="font-size:0.4cm; font-weight:lighter">Food<br><br>
+            Half grilled chicken & chips,or any burger of your choice(no extras) with chips,<br>
+           or a single large pizza of your choice(no extras)<br><br>
+            Desert<br> 
+          sundae of your choice<br><br>
+          Drink<br>
+          500ml water bottle per person.
+          </p></h1>
+                <p></p>
+        </div>
+        <!-- Add more slides with content and images as needed -->
+    
+
+    <button class="slider-button prev-button" onclick="prevSlide()">Previous</button>
+    <button class="slider-button next-button" onclick="nextSlide()">Next</button>
+    </div>
+            </div>
+    <br>
+    <div class="text-img">
+     <h1 style="color:white; font-size:1.6cm ;font-family:Copperplate, Papyrus, fantasy;"> <img src="https://nnmedia.nation.africa/uploads/2018/07/Family-eating.jpg" height="540" width="600">Kids birthday<p style="font-size:0.5cm;color:rgb(241, 81, 7)">*Kshs. 1,200 per child – minimum of 8 kids
+    </p><p style="font-size:0.4cm; font-weight:lighter">1 serves 4 people regular pizza<br>
+1x fruit juice and 1x water<br>
+1x delectable dessert of choice<br>
+(Dessert Pizza by prior arrangement and 1x per 4 people)<br>
+<p style="font-size:0.5cm;color:rgb(241, 81, 7)">*Kshs. 1,000 per child – minimum of 8 kids</p>
+<p style="font-size:0.4cm; font-weight:lighter">1x kid’s burger and fries,<br>
+1x fruit juice and 1x water,<br>
+1x delectable dessert of choice<br>
+(Dessert Pizza by prior arrangement and 1x per 4 people)<br>
+<p style="font-size:0.5cm;color:rgb(241, 81, 7)">*Kshs. 1,000 per child – minimum of 8 kids</p>
+<p style="font-size:0.4cm; font-weight:lighter">2x fried chicken and chips<br>
+1x fruit juice and 1x water<br>
+1x delectable dessert of choice<br>
+(Dessert Pizza by prior arrangement and 1x per 4 people)</p>
+  </h1><br><br>
+    </div>
+
+  </div>
+          </div>
+
+
           <div class="form">
           <div class="row py-3 justify-content-center bg-dark ">
             <div class="col-md-8 col-sm-12">
@@ -320,19 +452,12 @@
 
     <div class="form-row">
         <div class="col-md-6 mb-3">
-            <label style="color: beige;" for="numberofperson">Number of person</label>
-          
-            <select class="form-control border-dark" name="numberofperson" required>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
+            <label style="color: beige;" for="packages">Packages</label>
+            <select class="form-control border-dark" name="packages" required>
+                <option>adults package 1</option>
+                <option>adults package 2</option>
+                <option>adults package 3</option>
+                <option>kids birthday package</option>
             </select>
         </div>
         <div class="col-md-6 mb-3">
@@ -422,7 +547,40 @@
             <p style="color:#000002"id="current-year"></p> 
         </footer>
     </div> <!--footer end-->
-      
+    <script>
+         let currentIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.display = 'flex';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function prevSlide() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = slides.length - 1;
+            }
+            showSlide(currentIndex);
+        }
+
+        function nextSlide() {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+    </script>
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>

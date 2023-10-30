@@ -38,7 +38,7 @@ p{
 /* footer */
 
 footer{
-  background-color:  #8f8c8c;
+  background-color:  rgba(127, 129, 127, 0.418);
    color:  #000000;
    font-weight: bold;
    text-decoration-line: none;
@@ -415,7 +415,18 @@ h4{
 .dropdown:hover .dropdown-content {
   display: block;
 }
+/* Add rounded corners and hover transformation */
+.card-banner.rounded-image {
+  border-radius: 10px; /* Adjust the value for desired roundness */
+  overflow: hidden; /* Hide overflowing content within the rounded image */
+  transition: transform 0.3s; /* Apply a smooth transition on hover */
+}
 
+.card-banner.rounded-image:hover {
+  transform: scale(1.1); /* Increase size on hover (you can adjust the scale) */
+}
+
+/* Rest of your CSS styles for menu items */
 
 </style>
 <body>
@@ -425,14 +436,14 @@ h4{
   <header>
     
   
-  <div style="background-image: url(https://www.foodbusinessafrica.com/wp-content/uploads/2020/10/Big-Square-2.jpg); background-attachment: fixed; height: 630px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
+  <div style="background-image: url(https://www.foodbusinessafrica.com/wp-content/uploads/2020/10/Big-Square-2.jpg); background-attachment: fixed; height: 600px; width: 100%; background-position: center; background-repeat: no-repeat; background-size: cover; position: relative;">
 
     <!-- Add an overlay for the background image -->
     <div class="overlay">
       <!-- navbar -->
       <nav class="nav navbar fixed-top navbar-expand-lg bg-light-transparent" style="background-color: rgba(0, 0, 0, 0.678);">
         <div class="container">
-          <a class="navbar-brand" href="#" >
+          <a class="navbar-brand" href="index.html" >
             <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg" height="50" alt="Your choise logo">
           </a>
           <!--class="navbar-toggler": This attribute assigns the class "navbar-toggler" to the <button>. 
@@ -459,9 +470,6 @@ h4{
           
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                <li class="nav-item footer-link-item">
-                    <a class="nav-link" style="color: rgb(255, 72, 0)" href="signup1.php">LOGIN</a>
-                </li>
                 <li class="nav-item footer-link-item dropdown"> <!-- Added the "dropdown" class -->
                     <a class="nav-link" style="color: rgb(255, 72, 0)" href="index.html">HOME</a>
                     <div class="dropdown-content"> <!-- Added the dropdown content container -->
@@ -551,9 +559,8 @@ h4{
                 <li>
                   <div class="menu-card hover:card">
     
-                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                      <img src="https://www.rachelcooks.com/wp-content/uploads/2021/05/slow-cooker-ribs-web-1-of-5-square.jpg" width="100" height="100" loading="lazy" alt="Greek Salad"
-                        class="img-cover">
+                    <figure class="card-banner img-holder rounded-image" style="--width: 100; --height: 100;">
+                      <img src="https://www.rachelcooks.com/wp-content/uploads/2021/05/slow-cooker-ribs-web-1-of-5-square.jpg" width="100" height="100" loading="lazy" alt="Greek Salad"class="rounded-image">
                     </figure>
     
                     <div>
@@ -579,9 +586,9 @@ h4{
                 <li>
                   <div class="menu-card hover:card">
     
-                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <figure class="card-banner img-holder rounded-image" style="--width: 100; --height: 100;">
                       <img src="https://www.cookingclassy.com/wp-content/uploads/2019/08/breakfast-burrito-01.jpg" width="100" height="100" loading="lazy" alt="Lasagne"
-                        class="img-cover">
+                        class="rounded-image">
                     </figure>
     
                     <div>
@@ -605,9 +612,9 @@ h4{
                 <li>
                   <div class="menu-card hover:card">
     
-                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <figure class="card-banner img-holder rounded-image" style="--width: 100; --height: 100;">
                       <img src="https://media-cdn.tripadvisor.com/media/photo-s/17/57/7d/17/2-egg-breakfast.jpg" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
-                        class="img-cover">
+                        class="rounded-image">
                     </figure>
     
                     <div>
@@ -631,9 +638,9 @@ h4{
                 <li>
                   <div class="menu-card hover:card">
     
-                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <figure class="card-banner img-holder rounded-image" style="--width: 100; --height: 100;">
                       <img src="https://www.kitchensanctuary.com/wp-content/uploads/2023/07/Salt-and-Pepper-ribs-Square-FS.jpg" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
-                        class="img-cover">
+                        class="rounded-image">
                     </figure>
     
                     <div>
@@ -658,16 +665,16 @@ h4{
                 <li>
                   <div class="menu-card hover:card">
     
-                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <figure class="card-banner img-holder rounded-image" style="--width: 100; --height: 100;">
                       <img src="https://www.yum.co.ke/media/gallery_photos/Big_Square_Crispy_Fried_Chicken__chips.jpg.800x0_q85.jpg" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
-                        class="img-cover">
+                        class="rounded-image">
                     </figure>
     
                     <div>
     
                       <div class="title-wrapper">
                         <h3 class="title-3">
-                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder"> Chicken Fries</a>
+                          <a href="#" class="card-title" style="color: #f1420d; font-weight:bolder"> Chicken& Fries</a>
                         </h3>
     
                         <span class="span title-2" style="color: #000000; font-size:larger; font-weight:bolder;margin-left: 200px;">$25.00</span>
@@ -684,7 +691,7 @@ h4{
                 <li>
                   <div class="menu-card hover:card">
     
-                    <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
+                    <figure class="card-banner img-holder rounded-image" style="--width: 100; --height: 100;">
                       <img src="https://us.123rf.com/450wm/meykitchen/meykitchen2306/meykitchen230611646/207417251-three-milkshakes-chocolate-strawberry-professional-food-photography-ai-generated.jpg?ver=6" width="100" height="100" loading="lazy" alt="Opu Fish"
                         class="img-cover">
                     </figure>
@@ -704,7 +711,7 @@ h4{
                     </div>
                    
                     </div>
-                    <a href="menu.html" class="btn btn-dark">Learn more</a>
+                    <a href="menu.html" class="btn btn-dark">Full Menu</a>
                     </div>
             </div>
           </div>
@@ -758,7 +765,7 @@ h4{
             </div>
           </div>
           <div class="text-center">
-            <h4>Melissa</h4>
+            <h4>Shantelle</h4>
             <p class="font-italic" style="color: white;">"The food was fresh, properly prepared and a great value for the price. We highly recommend it. The breakfast buffet on Sunday was equally as good."</p>
           </div>
         </div>

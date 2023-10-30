@@ -12,7 +12,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = isset($_POST["name"]) ? $_POST["name"] : "";
     $email = isset($_POST["email"]) ? $_POST["email"] : "";
-    $numberofperson = isset($_POST["numberofperson"]) ? $_POST["numberofperson"] : "";
+    $packages = isset($_POST["packages"]) ? $_POST["packages"] : "";
     $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
     $date = isset($_POST["date"]) ? $_POST["date"] : "";
     $time = isset($_POST["time"]) ? $_POST["time"] : "";
@@ -22,15 +22,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
 
     // Use prepared statement
-    $stmt = $conn->prepare("INSERT INTO restaurant (name, email, numberofperson, phone, date, time, payment, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssisssss", $name, $email, $numberofperson, $phone, $date, $time, $payment, $message);
+    $stmt = $conn->prepare("INSERT INTO reservation (name, email, packages, phone, date, time, payment, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+    echo "Packages: " . $packages; // Add this line for debugging
+    
+    $stmt->bind_param("ssisssss", $name, $email, $packages, $phone, $date, $time, $payment, $message);
 
     if ($stmt->execute()) {
         echo "Data has been successfully inserted into the database.";
     } else {
-        echo "Error: " . $stmt->error;
+       
+        die("Error: " . $conn->error);
     }
-
+    
     $stmt->close();
     $conn->close();
 }
@@ -41,5 +44,5 @@ var_dump($time);
 var_dump($payment);
 var_dump($message);
 var_dump($email);
-var_dump($numberofperson);
+var_dump($packages);
 ?>
