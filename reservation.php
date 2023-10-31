@@ -34,7 +34,7 @@
   /* footer */
   
   footer{
-    background-color:  #8f8c8c;
+    background-color:  #ffffffe3;
      color:  #000000;
      font-weight: bold;
      text-decoration-line: none;
@@ -189,7 +189,7 @@
   
   /* contact us */
   h2{
-      color: #0c6611;
+     color: #f1420d;
       font-size: xx-large;
   }
   h3{
@@ -412,24 +412,29 @@ img {
             </div>
     <br>
     <div class="text-img">
-     <h1 style="color:white; font-size:1.6cm ;font-family:Copperplate, Papyrus, fantasy;"> <img src="https://nnmedia.nation.africa/uploads/2018/07/Family-eating.jpg" height="540" width="600">Kids birthday<p style="font-size:0.5cm;color:rgb(241, 81, 7)">*Kshs. 1,200 per child – minimum of 8 kids
-    </p><p style="font-size:0.4cm; font-weight:lighter">1 serves 4 people regular pizza<br>
-1x fruit juice and 1x water<br>
-1x delectable dessert of choice<br>
-(Dessert Pizza by prior arrangement and 1x per 4 people)<br>
-<p style="font-size:0.5cm;color:rgb(241, 81, 7)">*Kshs. 1,000 per child – minimum of 8 kids</p>
-<p style="font-size:0.4cm; font-weight:lighter">1x kid’s burger and fries,<br>
-1x fruit juice and 1x water,<br>
-1x delectable dessert of choice<br>
-(Dessert Pizza by prior arrangement and 1x per 4 people)<br>
-<p style="font-size:0.5cm;color:rgb(241, 81, 7)">*Kshs. 1,000 per child – minimum of 8 kids</p>
-<p style="font-size:0.4cm; font-weight:lighter">2x fried chicken and chips<br>
-1x fruit juice and 1x water<br>
-1x delectable dessert of choice<br>
-(Dessert Pizza by prior arrangement and 1x per 4 people)</p>
-  </h1><br><br>
-    </div>
-
+    <h1 style="color:white; font-size:1.6cm; font-family:Copperplate, Papyrus, fantasy;">
+        <img src="https://nnmedia.nation.africa/uploads/2018/07/Family-eating.jpg" height="540" width="600" style="float: right;">
+        Kids birthday
+        <p style="font-size:0.5cm; color:rgb(241, 81, 7)">*Kshs. 1,200 per child – minimum of 8 kids</p>
+        <p style="font-size:0.4cm; font-weight:lighter">1 serves 4 people regular pizza<br>
+            1x fruit juice and 1x water<br>
+            1x delectable dessert of choice<br>
+            (Dessert Pizza by prior arrangement and 1x per 4 people)
+        </p>
+        <p style="font-size:0.5cm; color:rgb(241, 81, 7)">*Kshs. 1,000 per child – minimum of 8 kids</p>
+        <p style="font-size:0.4cm; font-weight:lighter">1x kid’s burger and fries,<br>
+            1x fruit juice and 1x water,<br>
+            1x delectable dessert of choice<br>
+            (Dessert Pizza by prior arrangement and 1x per 4 people)
+        </p>
+        <p style="font-size:0.5cm; color:rgb(241, 81, 7)">*Kshs. 1,000 per child – minimum of 8 kids</p>
+        <p style="font-size:0.4cm; font-weight:lighter">2x fried chicken and chips<br>
+            1x fruit juice and 1x water<br>
+            1x delectable dessert of choice<br>
+            (Dessert Pizza by prior arrangement and 1x per 4 people)
+        </p>
+    </h1>
+</div>
   </div>
           </div>
 
@@ -521,13 +526,13 @@ img {
               </div>
               <div class="col-lg-4 col-md-12 text-center">
               <img src="https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg"height="150" alt="Your choise logo">
-            <span>Big Lounge</span>
+         
               </div>
               <div class="col-lg-4 col-md-12 text-center">
-                <hr class="pt-5 mt-5">
-              </div>
+            <hr class="pt-5 mt-5">
+          </div>
             </div> <!--row end--><br><br>
-            <p>If you have any questions, do not hesitate to ask them.</p>
+            <p style="color: #000000;">If you have any questions, do not hesitate to ask them.</p>
         <div class="row justify-content-center">
           <div class="col-md-9 col-sm-10 px-2 py-3">
             <div class="d-flex justify-content-between py-3 my-2">
