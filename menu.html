@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<link rel = "icon" type = "image/png" href = "https://bigsquare.co.ke/wp-content/uploads/2020/04/logo1.svg">
 
-	<title>Our Menu</title>
+	<title>Our Menu | Big Square</title>
 </head>
 <style>
 	*{
@@ -113,6 +113,7 @@
 	  .card-menu:hover{
 		transform: scale(1.1);
 		transition: transform 0.3s;
+		box-shadow: 0 5px 15px 0px orangered;
 	  }
 	 
 	  
@@ -221,7 +222,7 @@
 	}
 	
 	.form{
-		box-shadow: 0 5px 15px 0px rgba#fa5103f1;
+		box-shadow: 0 5px 15px 0px orangered;
 	}
 	
 		.reviews .content img:hover{
@@ -234,7 +235,34 @@
 		.index{
 			box-shadow: 0 5px 15px 0px rgba#fa5103f1;
 		}
-	
+	/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #07060675;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+  }
+  
+  /* Style the dropdown links */
+  .dropdown-content a {
+	color: #ec540e;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+  }
+  
+  /* Change link color on hover */
+  .dropdown-content a:hover {
+	background-color: #fa5103f1;
+	color: white;
+  }
+  
+  /* Show the dropdown content when the button is hovered over */
+  .dropdown:hover .dropdown-content {
+	display: block;
+  }
 </style>
 <body>
     <header>
@@ -255,11 +283,16 @@
 							<li class="nav-item active footer-link-item">
 							  <a class="nav-link"style="color:rgb(255, 72, 0)" href="index.html">HOME</a>
 							</li>
-							<li class="nav-item footer-link-item">
+							<li class="nav-item footer-link-item dropdown">
 							  <a class="nav-link"style="color:rgb(255, 72, 0)" href="menu.html">MENU</a>
+							  <div class="dropdown-content"> <!-- Added the dropdown content container -->
+								<a href="#breakfast"> Breakfast</a>
+								<a href="#lunch">Lunch/Dinner</a>
+								<a href="#desert">Desert/Beverages</a>
+							</div>
 							</li>
 							<li class="nav-item footer-link-item">
-							  <a class="nav-link"style="color:rgb(255, 72, 0)" href="reservation.php">RESERVATION</a>
+							  <a class="nav-link"style="color:rgb(255, 72, 0)" href="reservations.html">RESERVATION</a>
 							</li>
 							<li class="nav-item footer-link-item">
 							  <a class="nav-link"style="color:rgb(255, 72, 0)" href="contact.html">CONTACT US</a>
@@ -303,8 +336,8 @@
 		<!-- Breakfast -->
 		<div class="row justify-content-center">
 			<div class="col-12 text-center">
-				
-				<h2 id="breakfast">Breakfast Recipes</h2><br>
+				<a name="breakfast"></a>
+				<h2 id="breakfast">Breakfast Menu</h2><br>
 			</div>
 			<div class="col-sm-12 col-lg-4 col-md-4">
 				
@@ -425,7 +458,8 @@
 		<!-- Lunch & Dinner -->
 		<div class="row justify-content-center">
 			<div class="col-12 text-center">
-				<h2 id="lunch">Lunch & Dinner Recipes</h2><br>
+				<a name="lunch"></a>
+				<h2 id="lunch">Lunch & Dinner Menu</h2><br>
 			</div>
 			<div class="col-sm-12 col-lg-4 col-md-4">
 				<div class="card-menu" style="width: 100%; height: auto;">
@@ -545,7 +579,8 @@
 	<!-- Beverage -->
 	<div class="row justify-content-center">
 		<div class="col-12 text-center">
-			<h2 id="beverages">Desserts & Beverages</h2><br>
+			<a name="desert"></a>
+			<h2 id="beverages">Desserts & Beverages Menu</h2><br>
 		</div>
 		<div class="col-sm-12 col-lg-4 col-md-4">
 			<div class="card-menu" style="width: 100%; height: auto;">
@@ -666,15 +701,44 @@
 		</div>
 	</div>
 	</div>
-	
 
+<br><br><br>
+<section>
+        <div class="container shadow py-1 my-1">
+          <div class="row">
+			<div class="col-md-6 offset-md-6">
+				<h2 style="font-weight: 600;">Create Account</h2><br>
+        
+          <div class="card-menu">
+                <div class="row py-3 justify-content-center bg-dark">
+                    <div class="col-md-12 col-sm-12">
+            <form action="signup.php" method="POST" onsubmit="return validateForm();">
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label style="color: beige;" for="username">UserName</label>
+                        <input type="text" class="form-control border-dark" name="username" placeholder="username" required>
+                    </div>
+				</div>
+					<div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label style="color: beige;" for="email">Email Address</label>
+                        <input type="text" class="form-control border-dark" name="email" placeholder="email" required>
+                    </div>
+                </div>
+				<div class="form-row justify-content-center py-3">
+                    <div class="col-6 p-2">
+                        <button style="color: beige;" type="submit" value="submit"
+                            class="col-12 btn border-dark custom-btn">Submit</button>
+                    </div>
+                </div>
 
-
-
-
-
-	<br><br><br>
-<div>
+			</form>
+		</div>
+	</div>
+		  </div>
+		 
+</section>
+<br><br><br>
     <footer>
 		<div class="container">
 			<div class="row">
@@ -700,16 +764,34 @@
 			  </div>
 			</div>
 		  </div>
-        <i class="fa fa-map-marker w3-text-red" style="width:30px"></i> Nairobi,Kenya<br><br>
-        <i class="fa fa-phone w3-text-red" style="width:30px"></i> Phone: 0711791575<br>
-        <div class="py-2 p-1 m-2">
-			<i class="fas fa-envelope-open-text fs-30"></i>
-			<a href="mailto:irenewaweru9@gmail.com"><span class="footer-link-item"> irenewaweru9@gmail.com</span></a>
+		  <i class="fa fa-map-marker w3-text-red" style="width:30px; color:blue"></i> Nairobi,Kenya<br><br>
+		  <i class="fa fa-phone w3-text-red" style="width:30px; color:blue"></i> Phone: 0711791575<br>
+		  <i class="fa fa-phone w3-text-red" style="width:30px;color:blue"></i> Phone: 0759759761<br>
+		  <div class="py-2 p-1 m-2">
+			  <i class="fas fa-envelope-open-text fs-30" style="color: rgb(0, 4, 255)"></i>
+			  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><span class="footer-link-item"> irenewaweru9@gmail.com</span></a><br>
+		<i class="fas fa-envelope-open-text fs-30" style="color: rgb(25, 0, 255)"></i>
+		<a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><span class="footer-link-item"> waweruadrian2022@gmail.com</span></a>
+  
+			
 			<p style="color:#000002"id="current-year"></p> 
 		  </div>
-        
+		</div>
     </footer>
 </div>
+<script>
+	function validateForm() {
+		var username = document.getElementById("username").value;
+		var email = document.getElementById("email").value;
+	
+		if (username.trim() === "" || email.trim() === "") {
+			alert("Please fill in all fields.");
+			return false; // Prevent form submission
+		}
+	
+		return true; // Allow form submission
+	}
+	</script>
      <!--footer end-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>

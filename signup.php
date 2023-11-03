@@ -1,9 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get user input from the form
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
+    $username = isset($_POST["username"]) ? $_POST["username"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
 
     // Connect to your database (replace with your database credentials)
     $servername = "localhost";
@@ -19,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Check if the email already exists
-    $checkDuplicateEmail = $conn->prepare("SELECT COUNT(*) FROM signup WHERE email = ?");
+    $checkDuplicateEmail = $conn->prepare("SELECT COUNT(*) FROM registered WHERE email = ?");
     $checkDuplicateEmail->bind_param("s", $email);
     $checkDuplicateEmail->execute();
     $checkDuplicateEmail->bind_result($emailCount);
@@ -31,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error: An account with the same email already exists. Please use a different email.";
     } else {
         // No duplicate email found, proceed to insert data
-        $sql = "INSERT INTO signup (username, password, email) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO registered (username, email) VALUES ( ?, ?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $username, $password, $email); // No need to hash the password
+        $stmt->bind_param("ss", $username, $email); // No need to hash the password
 
         if ($stmt->execute()) {
             echo "Registration successful!";

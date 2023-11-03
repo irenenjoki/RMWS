@@ -3,7 +3,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get user input from the form
     $username = $_POST['username'];
     $password = $_POST['password'];
+// Perform database query here to check registration
+$isRegistered = true; // Replace with actual database check
 
+$response = array('isRegistered' => $isRegistered);
+echo json_encode($response);
     // Connect to your database (replace with your database credentials)
     $servername = "localhost";
     $dbUsername = "root";
@@ -18,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Query the database for the user
-    $stmt = $conn->prepare("SELECT username, password FROM signup WHERE username = ?");
+    $stmt = $conn->prepare("SELECT username, password FROM registered WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $stmt->bind_result($dbUsername, $dbPassword);
@@ -28,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Verify the entered username and password against the database
     if ($username === $dbUsername && $password === $dbPassword) {
         // Username and password are correct
-        header("Location: index.html"); // Redirect to the homepage
+        header("Location: reservations.php"); // Redirect to the homepage
         exit(); // Make sure to exit after redirection
     } else {
         // Username or password is incorrect
