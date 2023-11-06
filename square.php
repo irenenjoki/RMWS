@@ -9,15 +9,15 @@
  if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
  }
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
-    $names = isset($_GET["names"]) ? $_GET["names"] : "";
-    $email = isset($_GET["email"]) ? $_GET["email"] : "";
-    $package = isset($_GET["package"]) ? $_GET["package"] : "";
-    $phone = isset($_GET["phone"]) ? $_GET["phone"] : "";
-    $date = isset($_GET["date"]) ? $_GET["date"] : "";
-    $time = isset($_GET["time"]) ? $_GET["time"] : "";
-    $payment = isset($_GET["payment"]) ? $_GET["payment"] : "";
-    $message = isset($_GET["message"]) ? $_GET["message"] : "";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $names = isset($_POST["names"]) ? $_POST["names"] : "";
+    $email = isset($_POST["email"]) ? $_POST["email"] : "";
+    $package = isset($_POST["package"]) ? $_POST["package"] : "";
+    $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
+    $date = isset($_POST["date"]) ? $_POST["date"] : "";
+    $time = isset($_POST["time"]) ? $_POST["time"] : "";
+    $payment = isset($_POST["payment"]) ? $_POST["payment"] : "";
+    $message = isset($_POST["message"]) ? $_POST["message"] : "";
     
     
 
