@@ -458,7 +458,7 @@ img {
           <div class="form">
     <div class="row py-3 justify-content-center bg-dark">
         <div class="col-md-8 col-sm-12">
-        <form action="square.php" method="POST" onsubmit="return validateForm();">
+        <form onsubmit="return validateForm();" action="square.php" method="POST" >
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label style="color: beige;" for="name">Full Name</label>
@@ -469,6 +469,7 @@ img {
                         <input type="text" class="form-control border-dark" name="email" placeholder="email" required>
                     </div>
                 </div>
+                <div id="error-message" style="color: red;"></div>
 
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
@@ -580,7 +581,7 @@ img {
           <div class="form">
     <div class="row py-3 justify-content-center bg-dark">
         <div class="col-md-8 col-sm-12">
-        <form action="bookings.php" method="POST" onsubmit="return validateForm();">
+        <form onsubmit="return validateForm();" action="bookings.php" method="POST" >
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label style="color: beige;" for="name">Full Name</label>
@@ -696,95 +697,37 @@ img {
         </footer>
     </div> <!--footer end-->
     <script>
-         let currentIndex = 0;
-        const slides = document.querySelectorAll('.slide');
-
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                if (i === index) {
-                    slide.style.display = 'flex';
-                } else {
-                    slide.style.display = 'none';
-                }
-            });
-        }
-
-        function prevSlide() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = slides.length - 1;
+        //validation
+        function validateForm() {
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+        
+            var phonePattern = /^\d{10}$/; // Matches a 10-digit number
+            var emailPattern = /^\S+@\S+\.\S+$/; // Matches a basic email format
+        
+            if (!phone.match(phonePattern) || !email.match(emailPattern)) {
+                document.getElementById("error-message").textContent = "Please enter a valid phone number or email address.";
+                return false;
             }
-            showSlide(currentIndex);
+        
+            return true;
         }
+        </script>
+        
 
-        function nextSlide() {
-            if (currentIndex < slides.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            showSlide(currentIndex);
-        }
-
-        showSlide(currentIndex);
-        var packageSelect = document.getElementById("packageSelect");
-    var numberofpersonInput = document.getElementById("numberofperson");
-
-    packageSelect.addEventListener("change", function () {
-        numberofpersonInput.disabled = packageSelect.value !== "";
-    });
-
-    numberofpersonInput.addEventListener("input", function () {
-        packageSelect.disabled = numberofpersonInput.value !== "";
-    });
-    //validation//
-function validateForm() {
-    var email = document.getElementById("email").value;
-    var phone = document.getElementById("phone").value;
-
-    // Regular expressions for email and phone validation
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    var phoneRegex = /^(?:\+254|0)[17]\d{8}$/;
-
-    var errors = [];
-
-    if (!emailRegex.test(email)) {
-        errors.push("Input correct email address.");
-        document.getElementById("email-error").textContent = "Input correct email address.";
-    } else {
-        document.getElementById("email-error").textContent = "";
-    }
-
-    if (!phoneRegex.test(phone)) {
-        errors.push("Input correct phone format.");
-        document.getElementById("phone-error").textContent = "Input correct phone format.";
-    } else {
-        document.getElementById("phone-error").textContent = "";
-    }
-
-    if (errors.length > 0) {
-        return false; // Prevent form submission
-    }
-
-    return true; // Allow form submission
-}
-
-
-    const form = document.querySelector("form");
-form.addEventListener("submit", function (event) {
-    if (!validateForm()) {
-        event.preventDefault(); // Prevent form submission
-    }
-});
-
-
-
-
-    </script>
+   
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
       <script src="scripts.js"></script>
+      <script type="text/javascript">
+        if (typeof errorMessage !== 'undefined') {
+            alert(errorMessage); // Display the error message as a popup
+        }
+        if (typeof successMessage !== 'undefined') {
+            alert(successMessage); // Display the success message as a popup
+        }
+    </script>
+    
 </body>
 </html>

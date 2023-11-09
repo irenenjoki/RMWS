@@ -13,27 +13,26 @@ if ($conn->connect_error) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $names = isset($_POST["names"]) ? $_POST["names"] : "";
     $email = isset($_POST["email"]) ? $_POST["email"] : "";
-    $package = isset($_POST["package"]) ? $_POST["package"] : "";
+    $numberofperson = isset($_POST["numberofperson"]) ? $_POST["numberofperson"] : "";
     $phone = isset($_POST["phone"]) ? $_POST["phone"] : "";
     $date = isset($_POST["date"]) ? $_POST["date"] : "";
     $time = isset($_POST["time"]) ? $_POST["time"] : "";
     $payment = isset($_POST["payment"]) ? $_POST["payment"] : "";
     $message = isset($_POST["message"]) ? $_POST["message"] : "";
 
-    // Server-side validation for phone and email
-    $phonePattern = "/^\d{10}$/"; // Matches a 10-digit number
+    // Add validation for email and phone
     $emailPattern = "/^\S+@\S+\.\S+$/"; // Matches a basic email format
+    $phonePattern = "/^\d{10}$/"; // Matches a 10-digit phone number
 
-    if (!preg_match($phonePattern, $phone) || !preg_match($emailPattern, $email)) {
-        // Data is not valid, display an error message and do not insert into the database
-        echo "Invalid phone number or email address.";
+    if (!preg_match($emailPattern, $email) || !preg_match($phonePattern, $phone)) {
+        echo "Invalid email or phone number format.";
     } else {
-        // Data is valid, proceed with insertion
-        $stmt = $conn->prepare("INSERT INTO packages (names, email, package, phone, date, time, payment, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssssss", $names, $email, $package, $phone, $date, $time, $payment, $message);
+        // Use prepared statement to insert data into the database
+        $stmt = $conn->prepare("INSERT INTO reservations (names, email, numberofperson, phone, date, time, payment, message) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
+
+        $stmt->bind_param("ssisssss", $names, $email, $numberofperson, $phone, $date, $time, $payment, $message);
 
         if ($stmt->execute()) {
-            // Data has been successfully inserted into the database.
             echo "Data has been successfully inserted into the database.";
             header("Location: index.html"); 
 

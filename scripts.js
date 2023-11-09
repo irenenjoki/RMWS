@@ -33,37 +33,6 @@ const addEventOnElements = function (elements, eventType, callback) {
   }
 }
 
-/*console.log(document.querySelector('input[name="name"]').value);
-console.log(document.querySelector('input[name="email"]').value);
-console.log(document.querySelector('input[name="date"]').value);
-console.log(document.querySelector('input[name="phone"]').value);
-console.log(document.querySelector('input[name="numberofperson"]').value);
-console.log(document.querySelector('input[name="payment"]').value);
-console.log(document.querySelector('input[name="time"]').value);
-console.log(document.querySelector('input[name="message"]').value);
-// ... Repeat for other fields*/
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const reviewForm = document.getElementById('reviewForm');
-    const reviewList = document.getElementById('reviewList');
-
-    reviewForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        // Get user input
-        const name = document.getElementById('name').value;
-        const reviewText = document.getElementById('review').value;
-
-        // Create a new review item
-        const reviewItem = document.createElement('li');
-        reviewItem.innerHTML = `<strong>${name}:</strong> ${reviewText}`;
-
-        // Append the review to the list
-        reviewList.appendChild(reviewItem);
-
-        // Clear the form
-        reviewForm.reset();
-    });
-});

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function validateForm() {
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+
+            var phonePattern = /^\d{10}$/; // Matches a 10-digit number
+            var emailPattern = /^\S+@\S+\.\S+$/; // Matches a basic email format
+
+            if (!phone.match(phonePattern)) {
+                alert("Please enter a valid 10-digit phone number.");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return validateForm();">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" name="phone" required><br>
+
+        <label for="email">Email Address:</label>
+        <input type="text" id="email" name="email" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script type="text/javascript">
+        if (typeof errorMessage !== 'undefined') {
+            alert(errorMessage); // Display the error message as a popup
+        }
+        if (typeof successMessage !== 'undefined') {
+            alert(successMessage); // Display the success message as a popup
+        }
+    </script>
+</body>
+</html>
